@@ -1,0 +1,7 @@
+train: data/images/train  # train images (relative to 'path') 128 images
+val:   data/images/val
+#test: D:\BaiduNetdiskDownload\CBLPRD-330k_v1
+nc: 5
+
+# Classes
+names: ['car','bus','truck','person','motorcycle']
