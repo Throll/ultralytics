@@ -11,13 +11,12 @@ if __name__ == '__main__':
 	model.train(data='data.yaml',   #数据集yaml文件
 	            imgsz=640,
 	            epochs=300,
-	            batch=8,
+	            batch=16,
 	            workers=16,
-	            device="cuda:1",   #没显卡则将0修改为'cpu'
+	            device=[0,1],   #没显卡则将0修改为'cpu'
 	            optimizer='SGD',
                 amp = False,
-	            cache=False,   #服务器可设置为True，训练速度变快
+	            cache=True,   #服务器可设置为True，训练速度变快
                 patience=50,
-                conf=0.5,
 				lr0=0.001
 	)
